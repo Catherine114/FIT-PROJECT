@@ -1,0 +1,47 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+
+body{
+	background-image: url(fitnes.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-color: gray;
+}
+
+.header{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-left: 160px;
+	margin-right: 160px;
+}
+
+.header__title, .header__time, .header__phone{
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: none;
+}
+
+.header__title{
+	font-size: 35px;
+	line-height: 43px;
+	color: #F2F489;
+	margin-right: 483px;
+}
+
+.header__time, .header__phone{
+	font-size: 25px;
+	line-height: 30px;
+	color: #F2F489;
+}
+
+.header__phone:hover{
+	color: #ffd700;
+}
+
+.header__title:hover{
+	color: #ffd700;
+}
