@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title>Fitness Fit</title>
+	<link rel="stylesheet" type="text/css" href="style__reviews.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+	<header class="header">
+		<a class="header__title" href="index.html">Fitnes fit</a>
+		<a class="header__about" href="base.html">О клубе</a>
+	</header>
+	<main class="main">
+        <hr class="main__line">
+		<section id="app" class="main__editable-list editable-list" tabindex="0">
+            <div class="editable-list__stats stats">
+                <h3 class="stats__title" tabindex="0">{{"Количество отзывов: "+ tasks.length}}</h3>
+            </div>
+            <task class="editable-list__task" @task_done="delete_task(index)" :key="index" v-for="(data,index) in tasks" :data="data" ></task>
+            <div class="editable-list__add_task add_task">
+                <div class="add_task__input ">
+                    <input placeholder="Тема" type="text" v-model="new_task.title"  tabindex="0">
+                    <textarea placeholder="Комментарий" type="text" v-model="new_task.desc"  tabindex="0"></textarea>
+                </div>
+                <button class="add_task__btn" @click="add_task" tabindex="0">➕</button>
+            </div>
+        </section>
+	</main>
+    <footer class="footer">
+        <a class="footer__phone" href="">+7 999 777 99 77</a>
+		<a class="footer__address" href="">Москва, м. Электрозаводская</a>
+    </footer>
+    <script src="script__reviews.js"></script>
+</body>
+</html>
