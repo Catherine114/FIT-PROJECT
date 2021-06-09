@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
 	<title>Fitness Fit</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="style/style.css">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
 	<meta charset="utf-8">
@@ -14,16 +14,25 @@
 		<p class="header__time">07:00 - 01:00</p>
 		<a class="header__phone" href="">+7 999 777 99 77</a>
 	</header>
+	<hr class="line">
 	<main class="main">
 		<form class="main__form form" action="" method="">
 			<p class="form__heading">Для перехода на сайт:</p>
 			<div class="form__fields fields">
-				<label class="fields__id" for="clientsId">Введите ваш ID</label>
-				<input type="text" id="clientsId" placeholder="Введите ваш ID">
+				<label class="visually-hidden" for="clientsId">Введите ваш ID</label>
+				<input class="fields__id" type="text" id="clientsId" placeholder="Введите ваш ID">
 			</div>
 			<button class="form__button-id" type="submit" value="SEND MESSAGE">Войти</button>
 			<p class="form__text">Хотите узнать больше, войдите по кнопке ниже</p>
 			<button class="form__button-guest" type="submit" value="SEND MESSAGE">Войти как гость</button>
+		</form>
+
+		<form class="main__form-adm form-adm" action="" method="">
+			<div class="form-adm__fields fields">
+				<label class="visually-hidden" for="clientsId">Введите ваш ID</label>
+				<input class="fields__id" type="text" id="clientsId" placeholder="Введите ваш ID">
+			</div>
+			<button class="form__button-id" type="submit" value="SEND MESSAGE">Панель администратора</button>
 		</form>
 	</main>
 </body>

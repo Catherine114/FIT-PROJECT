@@ -1,0 +1,132 @@
+@import '_partial.scss';
+@forward 'elements.scss';
+@use 'elements.scss';
+body{
+	background-image: url(img/Fitness.jpg);
+	background-repeat: no-repeat;
+	background-color: gray;
+	width: 1440px;
+}
+
+.line{color: $yellow;}
+
+.header{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		@include pad;
+
+
+	.header__title, .header__time, .header__phone{
+		font-family: $font-stack;
+		font-style: normal;
+		font-weight: normal;
+		text-decoration: none;
+	}
+
+	.header__title{
+		font-size: 35px;
+		line-height: 43px;
+		color: $banan;
+		margin-right: 483px;
+	}
+
+	.header__time, .header__phone{
+		font-size: 25px;
+		line-height: 30px;
+		color: $banan;
+	}
+
+	.header__phone{
+		&:hover{
+			color: $yellow;
+		}
+	}
+
+	.header__title:hover{
+		color: $yellow;
+	}
+}
+
+.main{
+	@include pad;
+}
+
+.main__form{
+	background-color: rgba(238, 223, 171, 0.5);
+	width: 367px;
+	margin-top: 480px;
+	@include flex;
+	flex-direction: column;
+}
+
+.main__form-adm{
+	margin-bottom: 31px;
+	margin-top: 20px;
+	@include flex;
+	flex-direction: column;
+	width: 367px;
+	background-color: rgba(238, 223, 171, 0.5);
+}
+
+.form__heading{
+	font-family: $font-stack;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 22px;
+	line-height: 27px;
+	color: #EFEFEF;
+	margin-top: 26px;
+	margin-bottom: 9px;
+}
+
+.visually-hidden {
+	position: absolute;
+	clip: rect(0 0 0 0);
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+  }
+
+.fields__id{
+	background: $liteGray;
+	@include button;
+	width: 230px;
+	width: ( $btnwdth - 10 ); 
+	padding-left: 10px;
+	height: 30px;
+	margin-bottom: 9px;
+	margin-top: 14px;
+}
+
+.form__button-id{
+	@include button;
+	width: 240px;
+	height: 50px;
+	font-family: $font-stack;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 32px;
+	color: #4A4A4A;
+	background: $liteGray;
+	margin-bottom: 16px;
+}
+
+.form__button-guest{
+	@extend .form__button-id;
+	background: $banan;
+	margin-bottom: 30px;
+	margin-top: 8px;
+}
+
+.form__text{
+	font-family: $font-stack;
+	@extend %font;
+	font-size: 22px;
+	line-height: 27px;
+	text-align: center;
+	color: #EFEFEF;
+	width: 286px;
+}
+

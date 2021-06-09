@@ -1,0 +1,44 @@
+$font-stack: 'Montserrat';
+$yellow: #ffd700;
+$banan: #F2F489;
+$liteGray: #C4C4C4;
+$btnwdth: 240px;
+
+*{
+	padding: 0;
+	margin: 0;
+}
+
+@mixin my_opacity {
+    -webkit-transition: opacity 1s ease-in;
+    -moz-transition: opacity 1s ease-in;
+    transition: opacity 1s ease-in;
+  }
+  button:hover {
+    opacity: 0.5;
+    @include my_opacity;
+  }
+
+@mixin pad {
+    padding-left: 160px;
+    padding-right: 160px;
+}
+
+@mixin flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin button {
+    padding: 0;
+    border: none;
+    font-family: $font-stack;
+}
+
+$btn-color: buttons.$liteGray;
+
+%font{
+    font-style: normal;
+	font-weight: normal;
+}
